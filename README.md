@@ -1,10 +1,42 @@
 ![alt text](https://img.etimg.com/thumb/msid-59396101,width-300,imgsize-25094,resizemode-4/how-to-answer-unexpected-interview-questions.jpg "Logo Title Text 1")
-# Interview Website
+# Head Start
 > _Ahmad Mohammad Ahmad ALnsour_
 
 **Description :**
 This repository holds A Website dedicated to HR and Technical Interviews' questions and answers.
 
+minagate-web
+
+## Welcome to Head Start
+
+# Installation Guide
+
+This is a guide that will walk you through on how to install Head Start-web source code.
+
+## Steps
+
+## 1- git clone the repository  
+```
+git clone https://github.com/AhmadNsour/HeadStart.git
+```
+## 2- install all modules 
+```
+~$ cd front-end/
+sudo npm install
+
+~$ cd back-end/
+sudo npm install
+```
+
+## 3- start the project
+```
+~$ cd front-end/
+sudo npm start
+
+~$ cd back-end/
+sudo nodemon server.js
+```
+## Happy hacking :)
 **Subjects :**
 
 | Subject                     		| Provided      | Comments  	|
