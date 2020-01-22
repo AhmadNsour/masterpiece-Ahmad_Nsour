@@ -1,11 +1,9 @@
 ![alt text](https://img.etimg.com/thumb/msid-59396101,width-300,imgsize-25094,resizemode-4/how-to-answer-unexpected-interview-questions.jpg "Logo Title Text 1")
-# Head Start
+## Welcome to Head Start
 > _Ahmad Mohammad Ahmad ALnsour_
 
 **Description :**
 This repository holds A Website dedicated to HR and Technical Interviews' questions and answers.
-
-## Welcome to Head Start
 
 # Installation Guide
 
@@ -15,24 +13,34 @@ This is a guide that will walk you through on how to install Head Start-web sour
 
 ## 1- git clone the repository  
 ```
-git clone https://github.com/AhmadNsour/HeadStart.git
+~$ git clone https://github.com/AhmadNsour/HeadStart.git
 ```
 ## 2- install all modules 
 ```
+~$ cd Source\ Code/ 
+
 ~$ cd front-end/
-sudo npm install
+
+~$ sudo npm install
+```
+```
+~$ cd Source\ Code/
 
 ~$ cd back-end/
-sudo npm install
+
+~$ sudo npm install
 ```
 
 ## 3- start the project
 ```
 ~$ cd front-end/
-sudo npm start
 
+~$ sudo npm start
+```
+```
 ~$ cd back-end/
-sudo nodemon server.js
+
+~$ sudo nodemon server.js
 ```
 ## Happy hacking :)
 **Subjects :**
@@ -71,5 +79,7 @@ sudo nodemon server.js
 | add quiz API file			| ✔️            |		|
 | finsih quiz page			| ✔️            |		|
 | edit quiz api 			| ✔️            |		|
+| edit file structure 			| ✔️            |		|
+
 
 
