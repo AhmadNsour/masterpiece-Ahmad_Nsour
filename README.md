@@ -40,4 +40,6 @@ This repository holds A Website dedicated to HR and Technical Interviews' questi
 | Edit quiz style			| ✔️            |		|
 | add quiz API file			| ✔️            |		|
 | finsih quiz page			| ✔️            |		|
+| edit quiz api 			| ✔️            |		|
+
 

@@ -24,13 +24,12 @@ export default class HrQuestionsPage extends Component {
   };
 
   deletePost = _id => {
-    if (window.confirm("Delete Post?....")) {
-      axios
-        .post("http://localhost:9002/delete-tech-post", { _id })
-        .then(res => this.setState({ posts: res.data }));
-    } else {
-      return false;
-    }
+    axios.post("http://localhost:9002/delete-tech-post", { _id }).then(res =>
+      this.setState({ posts: res.data }, () => {
+        this.props.history.go("/HrQuestionsPage");
+        this.getHrPosts();
+      })
+    );
   };
 
   render() {

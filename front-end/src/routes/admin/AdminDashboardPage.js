@@ -161,19 +161,15 @@ export default class AdminDashboardPage extends Component {
   };
 
   deletePending = _id => {
-    if (window.confirm("Are You Sure?....")) {
-      axios.post("http://localhost:9002/delete-pending", { _id }).then(res => {
-        if (this.props.loggedInUser.role === "owner") {
-          this.getPendingAdmins();
-        } else if (this.props.loggedInUser.role === "hrAdmin") {
-          this.getPendingHrQuestions();
-        } else {
-          this.getPendingTechQuestions();
-        }
-      });
-    } else {
-      return false;
-    }
+    axios.post("http://localhost:9002/delete-pending", { _id }).then(res => {
+      if (this.props.loggedInUser.role === "owner") {
+        this.getPendingAdmins();
+      } else if (this.props.loggedInUser.role === "hrAdmin") {
+        this.getPendingHrQuestions();
+      } else {
+        this.getPendingTechQuestions();
+      }
+    });
   };
 
   deleteUser = _id => {

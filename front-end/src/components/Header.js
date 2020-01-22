@@ -114,13 +114,15 @@ export default class Header extends Component {
                         >
                           User Profile
                         </Link>
-                        <Link
-                          className="dropdown-item"
-                          to="/UserDashboardPage"
-                          style={{ textDecoration: "none", color: "black" }}
-                        >
-                          User Dashboard
-                        </Link>
+                        {role === "owner" ? null : (
+                          <Link
+                            className="dropdown-item"
+                            to="/UserDashboardPage"
+                            style={{ textDecoration: "none", color: "black" }}
+                          >
+                            User Dashboard
+                          </Link>
+                        )}
                         <Link
                           className="dropdown-item"
                           to="/AdminDashboardPage"

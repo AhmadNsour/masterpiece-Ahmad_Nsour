@@ -4,6 +4,7 @@ import { CSSTransitionGroup } from "react-transition-group";
 // import { CSSTransitionGroup } from "react-transition-group";
 
 function Result(props) {
+  console.log("props", props);
   return (
     <CSSTransitionGroup
       className="container result"
@@ -14,9 +15,8 @@ function Result(props) {
       transitionAppear
       transitionAppearTimeout={500}
     >
-      <div>
-        Your Mark is <strong>{props.quizResult}</strong> out of!
-      </div>
+      <h1>Your Quiz will be reviewed in 15 minutes</h1>
+      <h1>Check result in your dashboard</h1>
     </CSSTransitionGroup>
   );
 }

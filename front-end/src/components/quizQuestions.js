@@ -1,90 +1,104 @@
 var quizQuestions = [
   {
-    question: "What is you first name first letter?",
+    question: "What is verification and validation?",
     answers: [
       {
         type: 1,
-        content: "Ghzawi"
+        content:
+          "Verification: Verification is a term that refers to the set of activities which ensure that software implements a specific function. Validation: It refers to the set of activities which ensure that software that has been built according to the need of clients."
       },
       {
         type: 0,
-        content: "Nsour"
+        content:
+          "In the software, development security is always first. So if the execution of the program is slow then, I will try to identify the reason out ways to its time complexity"
       },
       {
         type: 0,
-        content: "Raghad"
+        content:
+          "A stub is a minimal implementation of an interface which generally returns hardcoded data while mock usually verifies outputs against expectations. Those expectations are set in the test."
       }
     ]
   },
   {
-    question: "Which console would you prefer to play with friends?",
+    question: " How can you make sure that your code is both safe and fast?",
     answers: [
       {
+        type: 0,
+        content: "I can write tests that define the expected error situations."
+      },
+      {
         type: 1,
-        content: "24"
+        content:
+          "In the software, development security is always first. So if the execution of the program is slow then, I will try to identify the reason out ways to its time complexity"
       },
       {
         type: 0,
-        content: "26"
-      },
-      {
-        type: 0,
-        content: "6"
+        content:
+          "A stub is a minimal implementation of an interface which generally returns hardcoded data while mock usually verifies outputs against expectations. Those expectations are set in the test."
       }
     ]
   },
   {
     question:
-      "Which of these racing franchises would you prefer to play a game from?",
+      "Name two tools which are used for keeping track of software requirements?",
+    answers: [
+      {
+        type: 0,
+        content:
+          "Every developer has their views when it comes to the programming language choices. Though, one should prefer high-level languages because they are dynamic. Like C and C++ languages."
+      },
+      {
+        type: 0,
+        content:
+          "In the software, development security is always first. So if the execution of the program is slow then, I will try to identify the reason out ways to its time complexity"
+      },
+      {
+        type: 1,
+        content:
+          "A stub is a minimal implementation of an interface which generally returns hardcoded data while mock usually verifies outputs against expectations. Those expectations are set in the test."
+      }
+    ]
+  },
+  {
+    question: "What language do you like to write programming algorithms?",
     answers: [
       {
         type: 1,
-        content: "Sam s8+"
+        content:
+          "Verification: Verification is a term that refers to the set of activities which ensure that software implements a specific function. Validation: It refers to the set of activities which ensure that software that has been built according to the need of clients."
       },
       {
         type: 0,
-        content: "Mario Iphone X"
+        content: "I can write tests that define the expected error situations."
       },
       {
         type: 0,
-        content: "IPhone 8"
+        content:
+          "Every developer has their views when it comes to the programming language choices. Though, one should prefer high-level languages because they are dynamic. Like C and C++ languages."
+      }
+    ]
+  },
+  {
+    question:
+      "Describe the difference between Interface-oriented, Object-oriented and Aspect-oriented programming?",
+    answers: [
+      {
+        type: 1,
+        content:
+          "Verification: Verification is a term that refers to the set of activities which ensure that software implements a specific function. Validation: It refers to the set of activities which ensure that software that has been built according to the need of clients."
+      },
+      {
+        type: 0,
+        content:
+          "In the software, development security is always first. So if the execution of the program is slow then, I will try to identify the reason out ways to its time complexity"
+      },
+      {
+        type: 0,
+        content:
+          "Every developer has their views when it comes to the programming language choices. Though, one should prefer high-level languages because they are dynamic. Like C and C++ languages."
       }
     ]
   }
-  // {
-  //   question: "Which of these games do you think is best?",
-  //   answers: [
-  //     {
-  //       type: "Ghzawi",
-  //       content: "BioShock"
-  //     },
-  //     {
-  //       type: "Nintendo",
-  //       content: "The Legend of Zelda: Ocarina of Time"
-  //     },
-  //     {
-  //       type: "Sony",
-  //       content: "Final Fantasy VII"
-  //     }
-  //   ]
-  // },
-  // {
-  //   question: "What console would you prefer to own?",
-  //   answers: [
-  //     {
-  //       type: "Ghzawi",
-  //       content: "X-Box One"
-  //     },
-  //     {
-  //       type: "Nintendo",
-  //       content: "Wii U"
-  //     },
-  //     {
-  //       type: "Sony",
-  //       content: "Playstation 4"
-  //     }
-  //   ]
-  // }
 ];
 
 export default quizQuestions;
