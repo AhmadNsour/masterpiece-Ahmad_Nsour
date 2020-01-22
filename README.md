@@ -43,7 +43,7 @@ This is a guide that will walk you through on how to install Head Start-web sour
 ~$ sudo nodemon server.js
 ```
 ## Happy hacking :)
-**Subjects :**
+**Development Worlflow :**
 
 | Subject                     		| Provided      | Comments  	|
 | :------------------------------------:|:-------------:|:-------------:|
