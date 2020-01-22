@@ -10,7 +10,7 @@ export default class JoinUsPage extends Component {
 
   submitApplication = () => {
     axios
-      .post("http://localhost:9002/application", this.props.loggedInUser)
+      .post("http://localhost:9000/application", this.props.loggedInUser)
       .then(res =>
         this.setState({
           msg: res.data

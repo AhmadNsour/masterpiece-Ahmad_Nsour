@@ -53,7 +53,7 @@ export default class AdminDashboardPage extends Component {
     event.target["gender"].value = "";
 
     axios
-      .post("http://localhost:9002/add-admin", {
+      .post("http://localhost:9000/add-admin", {
         name,
         email,
         password,
@@ -72,7 +72,7 @@ export default class AdminDashboardPage extends Component {
   };
 
   getUsers() {
-    axios.get("http://localhost:9002/get-users").then(response => {
+    axios.get("http://localhost:9000/get-users").then(response => {
       if (this._isMounted) {
         this.setState({ users: response.data });
       }
@@ -80,7 +80,7 @@ export default class AdminDashboardPage extends Component {
   }
 
   getPendingAdmins() {
-    axios.get("http://localhost:9002/get-pending-admins").then(response => {
+    axios.get("http://localhost:9000/get-pending-admins").then(response => {
       if (this._isMounted) {
         this.setState({ pendingAdmins: response.data });
       }
@@ -91,7 +91,7 @@ export default class AdminDashboardPage extends Component {
     if (window.confirm("Delete Post?....")) {
       let user_id = this.props.loggedInUser._id;
       axios
-        .post("http://localhost:9002/delete-user-post", { _id, user_id })
+        .post("http://localhost:9000/delete-user-post", { _id, user_id })
         .then(res => this.setState({ posts: res.data }));
     } else {
       return false;
@@ -100,7 +100,7 @@ export default class AdminDashboardPage extends Component {
 
   getHrPosts = () => {
     axios
-      .get(`http://localhost:9002/get-hr-posts`)
+      .get(`http://localhost:9000/get-hr-posts`)
       .then(res => {
         if (this._isMounted) {
           this.setState({ posts: res.data });
@@ -111,7 +111,7 @@ export default class AdminDashboardPage extends Component {
 
   getTechnicalPosts = () => {
     axios
-      .get(`http://localhost:9002/get-technical-posts`)
+      .get(`http://localhost:9000/get-technical-posts`)
       .then(res => {
         if (this._isMounted) {
           this.setState({ posts: res.data });
@@ -121,7 +121,7 @@ export default class AdminDashboardPage extends Component {
   };
 
   getPendingHrQuestions() {
-    axios.get("http://localhost:9002/get-hr-pendings").then(res => {
+    axios.get("http://localhost:9000/get-hr-pendings").then(res => {
       if (this._isMounted) {
         this.setState({ pendingQuestions: res.data });
       }
@@ -129,7 +129,7 @@ export default class AdminDashboardPage extends Component {
   }
 
   getPendingTechQuestions() {
-    axios.get("http://localhost:9002/get-tech-pendings").then(res => {
+    axios.get("http://localhost:9000/get-tech-pendings").then(res => {
       if (this._isMounted) {
         this.setState({ pendingQuestions: res.data });
       }
@@ -138,7 +138,7 @@ export default class AdminDashboardPage extends Component {
 
   answerPending = post => {
     if (window.confirm("Answer Post?....")) {
-      axios.post("http://localhost:9002/answer-pending", post).then(res => {
+      axios.post("http://localhost:9000/answer-pending", post).then(res => {
         if (this.props.loggedInUser.role === "hrAdmin") {
           this.getPendingHrQuestions();
         } else {
@@ -153,7 +153,7 @@ export default class AdminDashboardPage extends Component {
   acceptPending = admin => {
     if (window.confirm("Are You Sure?....")) {
       axios
-        .post("http://localhost:9002/accept-pending", admin)
+        .post("http://localhost:9000/accept-pending", admin)
         .then(res => this.getPendingAdmins());
     } else {
       return false;
@@ -161,7 +161,7 @@ export default class AdminDashboardPage extends Component {
   };
 
   deletePending = _id => {
-    axios.post("http://localhost:9002/delete-pending", { _id }).then(res => {
+    axios.post("http://localhost:9000/delete-pending", { _id }).then(res => {
       if (this.props.loggedInUser.role === "owner") {
         this.getPendingAdmins();
       } else if (this.props.loggedInUser.role === "hrAdmin") {
@@ -175,7 +175,7 @@ export default class AdminDashboardPage extends Component {
   deleteUser = _id => {
     if (window.confirm("Are You Sure?....")) {
       axios
-        .post("http://localhost:9002/delete-user", { _id })
+        .post("http://localhost:9000/delete-user", { _id })
         .then(res => this.setState({ users: res.data }));
     } else {
       return false;

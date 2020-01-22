@@ -5,7 +5,7 @@ export default class LoginPage extends Component {
   componentDidMount() {
     let id = this.props.loggedInUser._id;
     axios
-      .put(`http://localhost:9002/logout/${id}`)
+      .put(`http://localhost:9000/logout/${id}`)
       .then(res => this.props.getLoggedInUser());
     this.props.history.push("/");
   }

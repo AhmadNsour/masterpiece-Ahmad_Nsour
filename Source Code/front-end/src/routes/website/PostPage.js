@@ -15,7 +15,7 @@ export default class PostPage extends Component {
   getPostComments = () => {
     let id = this.props.location.state.post_id;
     axios
-      .get(`http://localhost:9002/get-post-comments/${id}`)
+      .get(`http://localhost:9000/get-post-comments/${id}`)
       .then(res => this.setState({ comments: res.data }))
       .catch(err => console.log(err));
   };
@@ -29,14 +29,14 @@ export default class PostPage extends Component {
     event.target["comment"].value = "";
 
     axios
-      .post("http://localhost:9002/add-comment", { comment, user_id, post_id })
+      .post("http://localhost:9000/add-comment", { comment, user_id, post_id })
       .then(res => this.getPostComments());
   };
 
   deleteComment = _id => {
     let user_id = this.props.loggedInUser._id;
     axios
-      .post("http://localhost:9002/delete-user-comment", { _id, user_id })
+      .post("http://localhost:9000/delete-user-comment", { _id, user_id })
       .then(res => {
         this.setState({ comments: res.data });
       });
@@ -45,7 +45,7 @@ export default class PostPage extends Component {
   deletePost = _id => {
     if (window.confirm("Delete Post?....")) {
       axios
-        .post("http://localhost:9002/delete-post", { _id })
+        .post("http://localhost:9000/delete-post", { _id })
         .then(res => this.props.history.goBack());
     } else {
       return false;

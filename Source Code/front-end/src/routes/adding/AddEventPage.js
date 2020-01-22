@@ -30,7 +30,7 @@ export default class AddEventPage extends Component {
     ) {
     } else {
       axios
-        .post("http://localhost:9002/add-event", event)
+        .post("http://localhost:9000/add-event", event)
         .then(res =>
           this.setState({
             msg: "Event Added Successfully! Check It In Events Page"

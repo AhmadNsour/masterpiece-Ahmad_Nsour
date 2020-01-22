@@ -3,6 +3,7 @@ import axios from "axios";
 import PendingQuestion from "../../components/PendingQuestion";
 import Post from "../../components/Post";
 import Comment from "../../components/Comment";
+import { CSSTransitionGroup } from "react-transition-group";
 
 export default class UserDashboardPage extends Component {
   _isMounted = false;
@@ -21,7 +22,7 @@ export default class UserDashboardPage extends Component {
 
   getPosts() {
     axios
-      .post("http://localhost:9002/get-user-posts", this.props.loggedInUser)
+      .post("http://localhost:9000/get-user-posts", this.props.loggedInUser)
       .then(res => {
         if (this._isMounted) {
           this.setState({ posts: res.data });
@@ -31,7 +32,7 @@ export default class UserDashboardPage extends Component {
 
   getComments() {
     axios
-      .post("http://localhost:9002/get-user-comments", this.props.loggedInUser)
+      .post("http://localhost:9000/get-user-comments", this.props.loggedInUser)
       .then(res => {
         if (this._isMounted) {
           this.setState({ comments: res.data });
@@ -42,7 +43,7 @@ export default class UserDashboardPage extends Component {
   deleteComment = _id => {
     let user_id = this.props.loggedInUser._id;
     axios
-      .post("http://localhost:9002/delete-user-comment", { _id, user_id })
+      .post("http://localhost:9000/delete-user-comment", { _id, user_id })
       .then(res => {
         this.setState({ comments: res.data });
       });
@@ -51,7 +52,7 @@ export default class UserDashboardPage extends Component {
   getPendings() {
     axios
       .post(
-        "http://localhost:9002/get-user-pending-questions",
+        "http://localhost:9000/get-user-pending-questions",
         this.props.loggedInUser
       )
       .then(res => {
@@ -64,14 +65,14 @@ export default class UserDashboardPage extends Component {
   deletePost = _id => {
     let user_id = this.props.loggedInUser._id;
     axios
-      .post("http://localhost:9002/delete-user-post", { _id, user_id })
+      .post("http://localhost:9000/delete-user-post", { _id, user_id })
       .then(res => this.setState({ posts: res.data }));
   };
 
   deletePending = _id => {
     let user_id = this.props.loggedInUser._id;
     axios
-      .post("http://localhost:9002/delete-pending", { _id, user_id })
+      .post("http://localhost:9000/delete-pending", { _id, user_id })
       .then(res => {
         this.getPendings();
       });
@@ -121,7 +122,7 @@ export default class UserDashboardPage extends Component {
           <h3 className="mt-3 mb-3 col-md-2">User Dashboard</h3>
         </div>
         <div className="row bg-light">
-          <div className="col-md-6 mt-3">
+          <div className="col-md-3 mt-3">
             <h4
               style={{
                 fontWeight: "lighter",
@@ -158,6 +159,28 @@ export default class UserDashboardPage extends Component {
               <i className="far fa-clock"></i> Pending
             </h4>
             {pendingsToShow}
+          </div>
+          <div className="col-md-3 mt-3">
+            <h4
+              style={{
+                fontWeight: "lighter",
+                textDecoration: "none",
+                fontSize: "27px"
+              }}
+            >
+              <i className="fa fa-hand-o-down"></i> Quizzes Result
+            </h4>
+            <CSSTransitionGroup
+              className="container result"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={800}
+              transitionLeaveTimeout={500}
+              transitionAppear
+              transitionAppearTimeout={500}
+            >
+              <h5>Quiz No.1 : 3 out of 5 </h5>
+            </CSSTransitionGroup>
           </div>
         </div>
         <br />

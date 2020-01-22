@@ -18,7 +18,7 @@ export default class AddQuestionPage extends Component {
     event.target["answer"].value = "";
 
     axios
-      .post("http://localhost:9002/add-post", {
+      .post("http://localhost:9000/add-post", {
         question,
         answer,
         field,

@@ -17,7 +17,7 @@ export default class TechnicalQuestionsPage extends Component {
 
   getTechnicalPosts = () => {
     axios
-      .get(`http://localhost:9002/get-technical-posts`)
+      .get(`http://localhost:9000/get-technical-posts`)
       .then(res => {
         if (this._isMounted) {
           this.setState({ posts: res.data });
@@ -27,7 +27,7 @@ export default class TechnicalQuestionsPage extends Component {
   };
 
   deletePost = _id => {
-    axios.post("http://localhost:9002/delete-tech-post", { _id }).then(res =>
+    axios.post("http://localhost:9000/delete-tech-post", { _id }).then(res =>
       this.setState({ posts: res.data }, () => {
         this.props.history.go("/TechnicalQuestionPage");
       })

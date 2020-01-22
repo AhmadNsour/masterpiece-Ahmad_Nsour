@@ -22,7 +22,7 @@ export default class LandingPage extends Component {
 
     let length = posts.length;
     let randomPosts = [];
-    let count = loggedInUser.role === null ? 7 : 1;
+    let count = loggedInUser.role === null ? 6 : 3;
     if (length > 1) {
       for (let i = 0; i < count; i++) {
         let postToPush = posts[Math.floor(Math.random() * (length - 1))];

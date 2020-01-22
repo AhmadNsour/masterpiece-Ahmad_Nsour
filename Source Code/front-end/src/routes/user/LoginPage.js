@@ -64,7 +64,7 @@ export default class LoginPage extends Component {
     let email = this.state.email;
     let password = this.state.password;
     axios
-      .post("http://localhost:9002/login-user", { email, password })
+      .post("http://localhost:9000/login-user", { email, password })
       .then(res => {
         if (res.data !== null) {
           this.props.checkLogin(res.data);

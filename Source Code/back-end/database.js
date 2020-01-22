@@ -1,10 +1,14 @@
 const mongoose = require("mongoose");
 
+// local database
+
 // mongoose.connect("mongodb://localhost/headStart", {
 //   useNewUrlParser: true
 // });
 
-//____________________________________ATLAS
+//end local database
+
+// ATLAS
 
 mongoose
   .connect(
@@ -16,7 +20,7 @@ mongoose
   })
   .catch(err => console.error(err));
 
-//_____________________________________________END ATLAS_______________________________________________________
+//END ATLAS
 const db = mongoose.connection;
 
 db.on("error", function() {
