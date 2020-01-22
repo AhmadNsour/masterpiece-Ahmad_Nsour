@@ -80,6 +80,8 @@ This is a guide that will walk you through on how to install Head Start-web sour
 | finsih quiz page			| ✔️            |		|
 | edit quiz api 			| ✔️            |		|
 | edit file structure 			| ✔️            |		|
+| add Atlas for database 		| ✔️            |		|
+| edit userDashboard	 		| ✔️            |		|
 
 
 
