@@ -5,8 +5,6 @@
 **Description :**
 This repository holds A Website dedicated to HR and Technical Interviews' questions and answers.
 
-minagate-web
-
 ## Welcome to Head Start
 
 # Installation Guide
