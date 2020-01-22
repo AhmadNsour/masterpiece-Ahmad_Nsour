@@ -1,0 +1,268 @@
+.navbar-nav {
+  font-size: 21px;
+  font-size: bolder;
+}
+.nav-item:hover {
+  border-bottom: 1px #fff solid !important;
+}
+#nav-bar {
+  background: rgba(98, 205, 217, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(98, 205, 217, 1) 0%,
+    rgba(58, 117, 140, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(98, 205, 217, 1)),
+    color-stop(100%, rgba(58, 117, 140, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(98, 205, 217, 1) 0%,
+    rgba(58, 117, 140, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(98, 205, 217, 1) 0%,
+    rgba(58, 117, 140, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(98, 205, 217, 1) 0%,
+    rgba(58, 117, 140, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(98, 205, 217, 1) 0%,
+    rgba(58, 117, 140, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62cdd9', endColorstr='#3a758c', GradientType=0 );
+
+  -webkit-box-shadow: 0px 6px 16px 0px rgba(122, 122, 122, 1);
+  -moz-box-shadow: 0px 6px 16px 0px rgba(122, 122, 122, 1);
+  box-shadow: 0px 6px 16px 0px rgba(122, 122, 122, 1);
+}
+#nav-bar i {
+  font-size: 55px;
+}
+#card-id {
+  background-color: #428c3f;
+  color: white;
+  opacity: 0.9;
+}
+#card-container {
+  opacity: 0.9;
+}
+#card-id h3 {
+  font-size: 36px;
+  font-weight: lighter;
+}
+
+#row-card {
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 7px;
+  -webkit-box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.16);
+}
+
+#event-card-event {
+  font-size: 29px;
+}
+#close-identity {
+  font-size: 22px;
+}
+
+#footer-identity {
+  background-color: #3d7b92;
+}
+.social-media {
+  padding: 0;
+  margin: 0 auto;
+}
+.social-media li {
+  list-style: none;
+  display: inline;
+  font-size: 19px;
+  margin-right: 11px;
+  color: white;
+}
+.social-media li a {
+  color: white;
+}
+
+#some-how {
+  background-color: white !important;
+  box-shadow: none !important;
+}
+.social-link {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 29%;
+  transition: all 0.3s;
+  font-size: 35px;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #eee;
+  font-family: sans-serif;
+}
+
+.containerQ {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+@media (min-width: 769px) {
+  .container {
+    margin: 2.5rem auto;
+  }
+}
+
+/* Result Component */
+.result {
+  padding: 1.5rem 2.5rem;
+}
+
+/* Quiz Component */
+.answerOptions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* QuestionCount Component */
+.questionCount {
+  padding: 1.5rem 2.5rem 0;
+  font-size: 24px;
+}
+
+/* Question Component */
+.question {
+  margin: 0;
+  padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+}
+
+/* AnswerOption Component */
+.answerOption {
+  border-top: 1px solid #eee;
+}
+
+.answerOption:hover {
+  background-color: #eefbfe;
+}
+
+.radioCustomButton {
+  position: absolute;
+  width: auto;
+  opacity: 0;
+}
+
+.radioCustomButton,
+.radioCustomLabel {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.radioCustomLabel {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 2.5rem 1.5rem 5rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.radioCustomButton ~ .radioCustomLabel:before {
+  position: absolute;
+  top: 20px;
+  left: 38px;
+  width: 28px;
+  height: 28px;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.radioCustomButton:checked ~ .radioCustomLabel:before {
+  content: "";
+  /* background: #8bc53f url(./svg/icon-check.svg) no-repeat; */
+  background-size: 27px;
+  border-color: #8bc53f;
+}
+
+/* Animation */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+.fade-leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
