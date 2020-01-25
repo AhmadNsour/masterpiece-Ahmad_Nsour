@@ -4,6 +4,9 @@
 
 **Description :**
 This repository holds A Website dedicated to HR and Technical Interviews' questions and answers.
+# The Website can be found on https://headstartapp.herokuapp.com/ 
+
+# Or follow the instructions below
 
 # Installation Guide
 
@@ -82,6 +85,7 @@ This is a guide that will walk you through on how to install Head Start-web sour
 | edit file structure 			| ✔️            |		|
 | add Atlas for database 		| ✔️            |		|
 | edit userDashboard	 		| ✔️            |		|
-
+| add to heroku		 		| ✔️            |		|
+| add heroku link to readme file 	| ✔️            |		|
 
 
